@@ -10,7 +10,7 @@ def main(in_file, mode):
         encrypt(in_file)
     elif mode is 'd':
         tokens = in_file.name.split('.')
-        if len(tokens) != 3 or tokens[2] != 'encr':
+        if tokens[len(tokens) -1] != 'encr':
             print "Can only decrypt file with extension: .encr"
             sys.exit(1)
         else:
