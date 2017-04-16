@@ -7,41 +7,44 @@ shift = 27
 
 def main(in_file, mode):
     if mode is 'e':
-        encrypt(in_file)
+        tokens = in_file.name.split('.')
+        if tokens[-1] == 'encr':
+            sys.exit("ERROR: Attempting to encrypt a file that is already encrypted")
+        else:
+            encrypt(in_file)
     elif mode is 'd':
         tokens = in_file.name.split('.')
-        if tokens[len(tokens) -1] != 'encr':
-            print "Can only decrypt file with extension: .encr"
-            sys.exit(1)
+        if tokens[-1] != 'encr':
+            sys.exit("Can only decrypt file with extension: .encr")
         else:
             decrypt(in_file)
 
 
 def encrypt(in_file):
     file_contents = in_file.readlines()
-    f.seek(0)
+    f.seek(0)                       # reset file pointer
     for line in file_contents:
         for c in line:
-            if c.isalpha():
+            if c.isalpha():         # perform shift
                 ch = chr(ord(c)+(shift % 26))
-            else:
+            else:                   # ignore non-aphabetic characters
                 ch = c
-            in_file.write(ch)
+            in_file.write(ch)       # overwrite file, one char at a time
     print in_file.name + ' encrypted'
-    os.rename(in_file.name, in_file.name + '.encr')
+    os.rename(in_file.name, in_file.name + '.encr') # Add file extension
 
 
 def decrypt(in_file):
     file_contents = in_file.readlines()
-    f.seek(0)
+    f.seek(0)                       # reset file pointer
     for line in file_contents:
         for c in line:
-            if c.isalpha():
+            if c.isalpha():         # perform shift
                 ch = chr(ord(c)-(shift % 26))
-            else:
+            else:                   # ignore non-alphabetic characters
                 ch = c
-            in_file.write(ch)
-    os.rename(in_file.name, in_file.name[:-5])
+            in_file.write(ch)       # ovrewrite file, one char at a time
+    os.rename(in_file.name, in_file.name[:-5])  # remove file extension
 
 
 def corr_num_args(argv):
