@@ -22,7 +22,7 @@ def main(in_file, mode):
 
 def encrypt(in_file):
     file_contents = in_file.readlines()
-    f.seek(0)                       # reset file pointer
+    f.seek(0)                       # reset file pointer (for overwriting)
     for line in file_contents:
         for c in line:
             if c.isalpha():         # perform shift
@@ -36,7 +36,7 @@ def encrypt(in_file):
 
 def decrypt(in_file):
     file_contents = in_file.readlines()
-    f.seek(0)                       # reset file pointer
+    f.seek(0)                       # reset file pointer (for overwriting)
     for line in file_contents:
         for c in line:
             if c.isalpha():         # perform shift
