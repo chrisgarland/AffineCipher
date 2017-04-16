@@ -44,6 +44,7 @@ def decrypt(in_file):
             else:                   # ignore non-alphabetic characters
                 ch = c
             in_file.write(ch)       # ovrewrite file, one char at a time
+    print in_file.name + ' decrypted'
     os.rename(in_file.name, in_file.name[:-5])  # remove file extension
 
 
