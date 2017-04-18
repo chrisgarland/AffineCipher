@@ -19,5 +19,5 @@ This program makes use of python 2.7.\* and has been run on the lab machines.
 </ul>
 
 – In both cases (encr/decr), **_KEY_** needs to be replaced by a numeric (int) value<br>
-– Cannot encrypt a file that is currently encrypted (has extension .encr)
+– Cannot encrypt a file that is currently encrypted (has extension .encr)<br>
 – Cannot decrypt a file that is currently unencrypted (does not have ext .encr)
