@@ -9,11 +9,11 @@ This program makes use of python 2.7.\* and has been run on the lab machines.
 ### 2. Run/Usage:
 <ul>
     <li>
-        encrypt:
-        <code>python affine_cipher.py <b>existing_file <i>MODE KEY</i></b></code>
+        encrypt: &nbsp;&nbsp;&nbsp;&nbsp;
+        <code>python affine_cipher.py <b>existing_file e <i>KEY</i></b></code>
     </li>
     <li>
-        decrypt:
-        <code>python affine_cipher.py <b>existing_file <i>MODE KEY</i></b></code>
+        decrypt: &nbsp;&nbsp;&nbsp;&nbsp;
+        <code>python affine_cipher.py <b>existing_file.encr d <i>MODE KEY</i></b></code>
     </li>
 </ul>
