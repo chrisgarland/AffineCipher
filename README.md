@@ -9,11 +9,17 @@ This program makes use of python 2.7.\* and has been run on the lab machines.
 ### 2. Run/Usage:
 <ul>
     <li>
-        encrypt: &nbsp;&nbsp;&nbsp;&nbsp;
+        encrypt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <code>python affine_cipher.py <b>existing_file e <i>KEY</i></b></code>
     </li>
     <li>
-        decrypt: &nbsp;&nbsp;&nbsp;&nbsp;
-        <code>python affine_cipher.py <b>existing_file.encr d <i>MODE KEY</i></b></code>
+        decrypt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>python affine_cipher.py <b>existing_file.encr d <i>KEY</i></b></code>
     </li>
 </ul>
+
+..* In both cases (encr/decr), **_KEY_** needs to be replaced by a numeric (int) value
+
+..* Cannot encrypt a file that is currently encrypted (has extension .encr)
+
+..* Cannot decrypt a file that is currently unencrypted (does not have ext .encr)
