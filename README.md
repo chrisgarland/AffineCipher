@@ -20,5 +20,5 @@ This program makes use of python 2.7.\* and has been run on the lab machines.
 
 – Cannot encrypt a file that is currently encrypted (has extension .encr)<br>
 – Cannot decrypt a file that is currently unencrypted (does not have ext .encr)<br>
-– Both 'e' and 'd' are literal<br>
+– Both '**e**' and '**d**' are literal<br>
 – In both cases (encr/decr), **_KEY_** needs to be replaced by a numeric (int) value
